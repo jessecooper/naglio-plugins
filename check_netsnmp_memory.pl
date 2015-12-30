@@ -76,7 +76,7 @@ my @expressions_netsnmpmem = (
 	'%buffer_real=buffer,total_real,%',		# Percent of buffer memory in relation to total real
    );
 
-use lib "/usr/lib/nagios/plugins";
+use lib "/usr/lib64/nagios/plugins";
 require "check_snmp_attributes.pl";
 process_expressions(@expressions_netsnmpmem);
 run_plugin();
