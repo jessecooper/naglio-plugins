@@ -1173,7 +1173,7 @@ sub func_snmp_proc {
     }
 
      # Get NetSNMP memory values
-     $resultat = (Net::SNMP->VERSION < 4) ?
+     $resultat = (Net::SNMP->VERSION lt v4) ?
 		$session->get_request(@nets_oid_array)
 		:$session->get_request(-varbindlist => \@nets_oid_array);
 
